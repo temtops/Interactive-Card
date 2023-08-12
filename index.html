@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <main role="container">
+        <div class="bg">
+            <div class="first">
+                <div class="card-logo">
+                    <img src="images/card-logo.svg" alt="">
+                </div>
+                <div class="card-image">
+                    <img src="images/bg-card-front.png" alt="card-front">
+                </div>
+                <div class="card-details">
+                    <div class="card-num " id="card-num">0000 0000 0000 0000</div>
+                    <span class="d-flex mt-3">
+                        <div class="card-name" id="card-name"><p>JANE APPLESEED</p></div>
+                        <div class="card-exp" id="card-exp">00/00</div>
+                    </span>
+                </div>
+            </div>
+            <div class="second">
+                <div class="card-back">
+                    <img src="images/bg-card-back.png" alt="">
+                </div>
+                <div class="cvv" id="cvv">000</div>
+            </div>
+            </div>
+        <div class="white" id="white">
+            <form action="" name="myform" class="">
+                <div class="CN">
+                    <label for="CARDHOLDER NAME">CARDHOLDER NAME</label>
+                    <input type="text" placeholder="eg. Jane Appleseed" id="name" name="name">
+                    <p id="p1" class="errmsg"></p>
+                </div>
+                <div class="CN2">
+                    <label for="CARD NUMBER">CARD NUMBER</label>
+                    <input type="text" id="num" placeholder="eg. 1234 5678 9123 0000" minlength="16" maxlength="16">
+                    <p id="p2" class="errmsg"></p>
+                </div>
+                <div class="mdetails">
+                    <div class="exp">
+                        <label for="Expiry Date">EXP. DATE {MM/YY}</label>
+                        <input type="text" name="" id="mm" class="mm" maxlength="2" minlength="2" placeholder="MM">
+                        <input type="text" name="" id="yy" class="yy" maxlength="2" minlength="2" placeholder="YY">
+                        <p id="p3" class="errmsg"></p>
+                    </div>
+                    <div class="cv">
+                        <label for="CVV">CVC</label>
+                        <input type="text" name="" id="cv" class="cv" maxlength="3" minlength="3" placeholder="eg.123">
+                        <p id="p4" class="errmsg"></p>
+                    </div>
+                </div>
+                <button id="confirm" class="btn" type="submit">Confirm</button>
+            </form>
+        </div>
+        <div class="success" id="success">
+            <img src="images/icon-complete.svg" alt="">
+            <div class="thank">
+                <h2>THANK YOU!</h2>
+                <p>We've added your card details</p>
+            </div>
+            <button id="confirmagain" class="btn" type="submit" onclick="alertMsg()" >Confirm</button>
+        </div>
+    </main>
+   <script src="index.js"></script> 
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
